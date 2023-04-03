@@ -9,9 +9,14 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    MAIL_SERVER = os.environ.get('MAIL_SERVER')
-    MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
-    MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'sandbox.smtp.mailtrap.io'
+    MAIL_PORT = int(os.environ.get('MAIL_PORT') or 2525)
+    MAIL_USE_TLS = True # os.environ.get('MAIL_USE_TLS') is not None
+    MAIL_USE_SSL = False
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or '9689877281d769'
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or '71e2047fc941ff'
     ADMINS = ['firli.pad@gmail.com']
+    TESTING = False
+    MAIL_SUPPRESS_SEND = False
+
+    POSTS_PER_PAGE = 3
