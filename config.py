@@ -22,3 +22,5 @@ class Config(object):
     MAIL_SUPPRESS_SEND = False
 
     POSTS_PER_PAGE = 3
+
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
