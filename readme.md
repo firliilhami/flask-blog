@@ -1,0 +1,2 @@
+# Blog Project
+This project is a blog apps that allows users to create and read story. The application also includes user authentication, allowing users to securely sign up, log in and log out. There are additional features like search the story based on keywords using elasticsearch and followers features that you can use to see story from others who you follow
